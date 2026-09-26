@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+
+.fleur-de-leah-regular {
+  font-family: "Fleur De Leah",
+    cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.charm-regular {
+  font-family: "Charm", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@theme {
+
+  --animate-gradient: gradientMove 5s ease infinite;
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@keyframes floatM {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-50vh) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation-name: floatM;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.emoji-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 20px;
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.memory-container {
+  max-width: 1200px;
+  margin: 90px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+  position: relative;
+  gap: 2rem;
+}
+
+.memory-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+@theme {
+
+  --animate-heart:heartbeat 2s infinite;
+
+  @keyframes heartbeat {
+    
+    0,
+    100% {
+      transform: scale(1);
+    }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+}
+}
