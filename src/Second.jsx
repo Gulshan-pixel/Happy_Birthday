@@ -58,7 +58,7 @@ const Second = () => {
 
             {/* Your actual content */}
             <div className="relative z-10 flex flex-col items-center justify-center mt-16 gap-8">
-                <h1 className="flex flex-col items-center justify-center charm-bold heading lg:text-5xl text-4xl font-bold text-pink-600 animate-bounce delay-1000 mx-2">
+                <h1 className="flex flex-col items-center justify-center charm-bold heading lg:text-5xl text-4xl font-bold text-pink-600 animate-[bounce_3s_infinite]  mx-2">
                     Happy Birthday 
                     <p className="mt-4">Name 💖</p>
                 </h1>

@@ -83,6 +83,7 @@
 }
 
 @keyframes float {
+
   0%,
   100% {
     opacity: 0.3;
@@ -129,18 +130,39 @@
 
 @theme {
 
-  --animate-heart:heartbeat 2s infinite;
+  --animate-heart: heartbeat 2s infinite;
 
   @keyframes heartbeat {
-    
+
     0,
     100% {
       transform: scale(1);
     }
 
-  50% {
-    transform: scale(1.1);
+    50% {
+      transform: scale(1.1);
+    }
+
+  }
+}
+
+/* @keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
 
-}
-}
+  100% {
+    transform: translateY(-20px);
+  }
+
+  0% {
+    transform: translateY(-0px);
+  }
+} */
+
+/* .bb {
+  animation-name: bounce;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+} */
