@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useRef, useState } from "react";
 
 import First from "./First";
-import Second from "./second";
+import Second from "./Second";
 import Third from "./Third";
 
 import music1 from "./assets/audio/Jeene Laga Hoon Instrumental.mp3";
